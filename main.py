@@ -30,8 +30,8 @@ if __name__ == "__main__":
     parser.add_argument('--mode', type=str, default="retail", help='')
     args = parser.parse_args()
 
-    # driver = utils.make_driver(headless=False)   # headless=False for debugging
-    driver = utils.make_driver(headless=True)
+    driver = utils.make_driver(headless=False)   # headless=False for debugging
+    # driver = utils.make_driver(headless=True)
     wait = WebDriverWait(driver, 5)
 
     if args.mode == "trade":
