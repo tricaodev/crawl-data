@@ -6,7 +6,7 @@ from datetime import date
 
 import geocoder
 from selenium import webdriver
-from selenium.common import TimeoutException, ElementClickInterceptedException, NoSuchElementException, \
+from selenium.common import ElementClickInterceptedException, NoSuchElementException, \
     StaleElementReferenceException
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.service import Service
@@ -40,7 +40,7 @@ def close_cookies(wait):
             EC.element_to_be_clickable((By.XPATH, f"//button[contains(., 'Allow All')]"))
         )
         cookie_btn.click()
-    except TimeoutException:
+    except Exception:
         pass
 
 
@@ -50,7 +50,7 @@ def close_postcode(wait):
             EC.element_to_be_clickable((By.CSS_SELECTOR, 'div[data-test-id="close-button"]'))
         )
         close_btn.click()
-    except TimeoutException:
+    except Exception:
         pass
 
 def show_all_products(driver, wait):
@@ -90,7 +90,7 @@ def open_length_dropdown(driver, wait):
         driver.execute_script("arguments[0].scrollIntoView({block:'center'});", btn)
         driver.execute_script("arguments[0].click();", btn)
         return wait.until(EC.visibility_of_element_located((By.CSS_SELECTOR, 'div[data-test-id="variants-list"]')))
-    except TimeoutException:
+    except Exception:
         return None
 
 def get_all_length_labels(driver, wait, max_scroll=30):
@@ -128,6 +128,9 @@ def get_all_length_labels(driver, wait, max_scroll=30):
 def click_length_by_label(driver, wait, label: str):
     list_box = open_length_dropdown(driver, wait)
 
+    if list_box is None:
+        return
+
     xpath = (
         f'//div[@data-test-id="variants-list"]'
         f'//div[@data-test-id="list-item-with-price"]'
@@ -146,7 +149,7 @@ def click_length_by_label(driver, wait, label: str):
     try:
         wait.until(EC.invisibility_of_element_located((By.CSS_SELECTOR, 'div[data-test-id="variants-list"]')))
         wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, 'div[data-test-id="product-name"] h1, h1')))
-    except TimeoutException:
+    except Exception:
         driver.execute_script("document.body.click();")
 
 
