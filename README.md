@@ -3,8 +3,8 @@
 <img width="1906" height="987" alt="image" src="https://github.com/user-attachments/assets/a68a2ef4-b25d-4040-bb66-3010dd225bd0" />
 
 # 2. Open Terminal: ```Window -> Type Terminal -> Enter```
-# 3. Clone repo: ```git clone https://github.com/tricaodev/travis-perkins-crawler.git```
-# 4. Go to working directory: ```cd travis-perkins-crawler```
+# 3. Clone repo: ```git clone https://github.com/tricaodev/crawl-data.git```
+# 4. Go to working directory: ```cd crawl-data```
 <img width="1417" height="328" alt="image" src="https://github.com/user-attachments/assets/5c062566-e17f-4cd0-a34e-a561998effbd" />
 
 # 5. Create virtual environment: ```python -m venv .venv```
