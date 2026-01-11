@@ -1,5 +1,9 @@
 import argparse
-from travis_perkins import run
+import travis_perkins
+import materials_market
+import jewson
+import wickes
+import building_materials
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
@@ -9,16 +13,16 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     if args.page == "travis_perkins":
-        run.main(args.mode)
+        travis_perkins.run.main(args.mode)
 
     elif args.page == "materials_market":
-        pass
+        materials_market.run.main(args.mode)
 
     elif args.page == "jewson":
-        pass
+        jewson.run.main(args.mode)
 
     elif args.page == "wickes":
-        pass
+        wickes.run.main(args.mode)
 
     elif args.page == "building_materials":
-        pass
+        building_materials.run.main(args.mode)
