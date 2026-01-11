@@ -5,16 +5,16 @@
 # 2. Open Terminal: ```Window -> Type Terminal -> Enter```
 # 3. Clone repo: ```git clone https://github.com/tricaodev/crawl-data.git```
 # 4. Go to working directory: ```cd crawl-data```
-<img width="1417" height="328" alt="image" src="https://github.com/user-attachments/assets/5c062566-e17f-4cd0-a34e-a561998effbd" />
+<img width="1097" height="255" alt="image" src="https://github.com/user-attachments/assets/d9a3f0bb-5f20-4ec8-beb4-e77f5bd6f5a0" />
 
 # 5. Create virtual environment: ```python -m venv .venv```
 # 6. Active virtual environment
 * Window: ```./.venv/Scripts/activate```
 * MacOS: ```source ./.venv/bin/activate```
-<img width="1602" height="181" alt="image" src="https://github.com/user-attachments/assets/29950c93-5d23-432b-8c7b-80dec4e3c0d1" />
+<img width="1829" height="341" alt="image" src="https://github.com/user-attachments/assets/e9abb8cf-9973-4de4-8ca1-29585b1566a2" />
 
 # 7. Install python package: ```pip install -r .\requirements.txt```
-<img width="1596" height="454" alt="image" src="https://github.com/user-attachments/assets/549d68c4-d4b1-4e01-87f5-bccf953ff1bf" />
+<img width="1831" height="336" alt="image" src="https://github.com/user-attachments/assets/d725f73f-4a9f-4137-a1d5-d8438e9be7b9" />
 
 # 9. Run crawler:
 * ```python main.py --page travis_perkins --mode retail``` -> Crawl data from Travis Perkins without login to get retail price
